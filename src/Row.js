@@ -3,7 +3,7 @@ import axios from "./axios";
 import "./Row.css";
 const image_url = "https://image.tmdb.org/t/p/original";
 
-function Row({ title, fetchUrl }) {
+function Row({ title, fetchUrl, isLargeRow}) {
   const [movies, setMovies] = useState([]);
 
   // code that runs based on a specific condition
@@ -24,8 +24,8 @@ function Row({ title, fetchUrl }) {
         {movies.map((movie) => (
           <img
             key={movie.id} // instant responce 
-            className="row_poster"
-            src={`${image_url}${movie.poster_path}`}
+            className={`row_poster ${isLargeRow && 'largePoster'}`}
+            src={`${image_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
             alt={movie.name}
           />
         ))}
