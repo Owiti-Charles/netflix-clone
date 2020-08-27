@@ -3,12 +3,13 @@ import Row from "../src/Row";
 import "./App.css";
 import requests from "./requests";
 import Banner from "./Banner";
+import Navbar from "./Navbar";
 
 function App() {
   return (
     <div className="App">
       {/* navbar */}
-
+      <Navbar />
       {/* banner component */}
       <Banner />
 
