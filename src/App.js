@@ -2,14 +2,21 @@ import React from "react";
 import Row from "../src/Row";
 import "./App.css";
 import requests from "./requests";
+import Banner from "./Banner";
 
 function App() {
   return (
     <div className="App">
+      {/* navbar */}
+
+      {/* banner component */}
+      <Banner />
+
+      {/* row components */}
       <Row
         title="Netflix Original"
         fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
+        isLargeRow // prop for styling individual row
       />
       <Row title="Trending Now " fetchUrl={requests.fetchTrending} />
       <Row title="Now Playing" fetchUrl={requests.nowPlaying} />
