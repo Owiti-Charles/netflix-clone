@@ -1,5 +1,7 @@
 .row {
     margin-left: 20px;
+    color: white;
+    margin-top: 20px;
 }
 .row_poster {
   object-fit: contain;
